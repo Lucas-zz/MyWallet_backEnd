@@ -1,6 +1,6 @@
 import db from "../db.js";
 
-export async function tokenValidationMiddleware(request, response, next) {
+export default async function tokenValidationMiddleware(request, response, next) {
     const { authorization } = request.headers;
     const token = authorization?.replace('Bearer ', '')
     if (!token) {

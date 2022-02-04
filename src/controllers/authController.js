@@ -1,9 +1,11 @@
 import bcrypt from 'bcrypt';
+import { stripHtml } from 'string-strip-html';
 import { v4 as uuid } from 'uuid';
 import db from '../db.js';
 
 export async function signUp(request, response) {
-    const user, { email } = request.body;
+    const user = request.body;
+    const { email } = request.body;
     user.name = stripHtml(user.name).result.trim();
 
     try {
