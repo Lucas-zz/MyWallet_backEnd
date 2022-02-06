@@ -5,7 +5,6 @@ export async function getExtract(request, response) {
 
     try {
         const entries = await db.collection('entries').find({ userId: user._id }).toArray();
-
         response.send(entries);
     } catch (error) {
         console.log(error);
