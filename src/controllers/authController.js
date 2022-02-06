@@ -6,7 +6,10 @@ import db from '../db.js';
 export async function signUp(request, response) {
     const user = request.body;
     const { email } = request.body;
+
     user.name = stripHtml(user.name).result.trim();
+    user.password = stripHtml(user.password).result.trim();
+    user.email = stripHtml(user.email).result.trim();
 
     try {
         const isRegistered = await db.collection('users').findOne({ email });
