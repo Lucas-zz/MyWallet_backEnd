@@ -1,7 +1,7 @@
 import joi from 'joi';
 
 const extractSchema = joi.object({
-    valor: joi.number().pattern(/^[0-9]* \, [0-9]{2}$/).required(),
+    value: joi.number().pattern(/^[0-9]* \, [0-9]{2}$/).required(),
     description: joi.string().required()
 });
 

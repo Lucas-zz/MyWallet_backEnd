@@ -33,12 +33,13 @@ export async function signIn(request, response) {
     if (user && bcrypt.compareSync(password, user.password)) {
         const token = uuid();
 
-        console.log(user);
+        await db.collection('sessions').insertOne({ userId: user._id, token });
 
-        await db.collection('sessions').insertOne({ token, userId: user._id });
+        let userInfo = { ...user, token }
+        delete userInfo.password;
 
-        response.send(token);
+        response.send(userInfo);
     } else {
-        response.sendStatus(401);
+        response.status(401).send('Email ou senha incorretos!');
     }
 }
