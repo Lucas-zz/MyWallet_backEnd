@@ -1,7 +1,7 @@
 import joi from 'joi';
 
 const entrySchema = joi.object({
-    value: joi.number().pattern(/^[0-9]* \, [0-9]{2}$/).required(),
+    value: joi.string().required(),
     type: joi.string().valid('plus', 'minus').required(),
     description: joi.string().required()
 });

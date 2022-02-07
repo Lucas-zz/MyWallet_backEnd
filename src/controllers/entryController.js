@@ -16,7 +16,6 @@ export async function postEntry(request, response) {
         response.status(201).send(entry);
 
     } catch (error) {
-        console.log(error);
         response.status(500).send(error);
     }
-}
+} 

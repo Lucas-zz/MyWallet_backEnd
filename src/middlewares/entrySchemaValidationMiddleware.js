@@ -1,4 +1,4 @@
-import entrySchema from "../schemas/entrySchema";
+import entrySchema from "../schemas/entrySchema.js";
 
 export default function entrySchemaValidationMiddleware(request, response, next) {
     const validation = entrySchema.validate(request.body);
