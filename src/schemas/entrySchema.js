@@ -6,4 +6,4 @@ const entrySchema = joi.object({
     description: joi.string().required()
 });
 
-export default entrySchema; 
+export default entrySchema;  
