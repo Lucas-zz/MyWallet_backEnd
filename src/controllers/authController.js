@@ -31,7 +31,6 @@ export async function signIn(request, response) {
     const { email, password } = request.body;
 
     const user = await db.collection('users').findOne({ email });
-    console.log(user);
 
     if (user && bcrypt.compareSync(password, user.password)) {
         const token = uuid();
