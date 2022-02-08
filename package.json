@@ -9,7 +9,6 @@
   },
   "main": "app.js",
   "scripts": {
-    "prestart": "next build",
     "start": "node ./src/app.js",
     "dev": "npx nodemon ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
