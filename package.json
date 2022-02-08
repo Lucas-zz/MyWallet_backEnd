@@ -7,10 +7,11 @@
     "node": "14.16.1",
     "npm": "8.3.0"
   },
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "npx nodemon src/app.js",
+    "prestart": "next build",
+    "start": "node ./src/app.js",
+    "dev": "npx nodemon ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
