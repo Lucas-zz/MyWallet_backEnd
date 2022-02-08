@@ -3,11 +3,15 @@
   "type": "module",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.16.1"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/app.js",
-    "dev": "npx nodemon ./src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +28,7 @@
     "joi": "^17.6.0",
     "mongodb": "^4.3.1",
     "react-router-dom": "^6.2.1",
+    "serve": "^13.0.2",
     "string-strip-html": "^9.1.6",
     "uuid": "^8.3.2"
   }
